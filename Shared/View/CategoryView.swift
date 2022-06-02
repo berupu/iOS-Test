@@ -18,11 +18,12 @@ struct CategoryView: View {
                 Image("category1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .offset(y: viewState.height)
+ 
                 
                 BottomCategoryView()
                     .offset(y: viewState.height)
                     .padding(.horizontal,7)
-                //.frame(height: viewState.height)
                     .gesture(
                         DragGesture()
                             .onChanged({ (value) in
@@ -33,8 +34,6 @@ struct CategoryView: View {
                                 if self.viewState.height > -20 {
                                     self.showFull.toggle()
                                 }
-                                
-                                
                             })
                             .onEnded({ (value) in
                                 

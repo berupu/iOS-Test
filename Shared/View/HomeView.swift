@@ -36,9 +36,9 @@ struct HomeView: View {
                     }
                     
                 }
-                .background(LinearGradient(colors: [Color.purple.opacity(0.3), Color.white, Color.green.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .background(LinearGradient(colors: [Color.purple.opacity(0.7), Color.white, Color.green.opacity(0.8)], startPoint: .topLeading, endPoint: .bottomTrailing))
                 
-                
+                Spacer()
                 ZStack {
                     ScrollView {
                         QuotesView()
